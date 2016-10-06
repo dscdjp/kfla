@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+
+.pager ul li a {
+    &:hover,&:focus,&.current {
+        background-color: $clr_blue;
+        color: #FFF;
+    }
+}
+
+.list {
+    &-rowdl dt {
+        text-align: center;
+    }
+}

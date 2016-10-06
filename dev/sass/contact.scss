@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+// reason.scss
+
+
+.form {
+    &-subject {
+        text-align: left !important;
+        label:first-child {
+            margin-right: $mg_s;
+        }
+    }
+    &-w50 {
+        width: 47.5%;
+        margin: 1%;
+    }
+    &-w100 {
+        width: 100%;
+    }
+    &-zipcode {
+        width: 6em;
+    }
+    &-pref {
+        margin: 10px 5px 10px 0;
+    }
+    &-city {
+        margin: 10px;
+    }
+    &-tel {
+        width: 10em;
+    }
+    &-textarea {
+        width: 100%;
+        min-height: 10em;
+    }
+    .tbl-wide_spHorizontal {
+        tr {
+            width: 100%;
+            float: none;
+            margin: 0;
+        }
+    }
+    &-submit {
+        margin: $mg_m 0 0;
+    }
+}
+
+.tbl {
+    &-wide {
+        tr {
+            td {
+                padding: 10px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@include mq-sp {
+    .form {
+        &-w50 {
+            width: 47%;
+        }
+        &-zipcode {
+            width: 30%;
+        }
+        &-pref {
+            width: 30%;
+        }
+        &-city {
+            width: 30%;
+        }
+        &-submit {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+form input[type=text].wpcf7c-conf,
+form input[type=tel].wpcf7c-conf,
+form input[type=email].wpcf7c-conf,
+form textarea.wpcf7c-conf {
+    display: inline-block;
+    width: auto;
+    background: none !important;
+    border: none !important;
+    @include box-shadow(none);
+    &:focus {
+        border: none;
+    }
+}

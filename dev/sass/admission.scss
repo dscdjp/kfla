@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+// reason.scss
+
+.admission {
+    &-flow {
+        list-style: none;
+        padding: 0;
+        li {
+            padding: $mg_s;
+            margin-bottom: $mg_m;
+            background: $clr_bg_sblue;
+            color: $clr_sblue;
+            font-weight: bold;
+            position: relative;
+            &:before{
+                content: "";
+                border: 15px solid transparent;
+                border-top: 15px solid $clr_bg_sblue;
+                position: absolute;
+                right: 50%;
+                bottom: -30px;
+            }
+            &:last-child:before {
+                border: none;
+            }
+        }
+    }
+    &-download {
+        background-color:$clr_bg_sblue;
+        padding: $mg_s;
+        h4 {
+            text-align: center;
+            font-weight: bold;
+            font-size: $fnt_size_m;
+            color: $clr_sblue;
+            padding-bottom: $mg_s;
+            margin-bottom: $mg_s;
+        }
+        .btn-sblue {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,488 @@
+// **********************************
+// その他パーツ
+// **********************************
+
+.mgt_ss {
+    margin-top: $mg_s/2 !important;
+}
+
+.mgt_s {
+    margin-top: $mg_s !important;
+}
+
+.mgt_m {
+    margin-top: $mg_m !important;
+}
+
+.mgt_l {
+    margin-top: $mg_l !important;
+}
+
+.mgt_ll {
+    margin-top: $mg_l*1.5 !important;
+}
+
+.mgb_ss {
+    margin-bottom: $mg_s/2 !important;
+}
+
+.mgb_s {
+    margin-bottom: $mg_s !important;
+}
+
+.mgb_m {
+    margin-bottom: $mg_m !important;
+}
+
+.mgb_l {
+    margin-bottom: $mg_l !important;
+}
+
+.mgb_ll {
+    margin-bottom: $mg_l*1.5 !important;
+}
+
+.text {
+    &-bold {
+        font-weight: bold;
+    }
+    &-mincho {
+        @include mincho;
+        &_gold {
+            color: #C1AE4C;
+        }
+        &_pink {
+            color: #D982AD;
+        }
+    }
+    &-orange {
+        color: #FF9900;
+    }
+}
+
+
+// グーグルマップ
+.ggmap {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    color: $clr_common;
+}
+
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.list {
+
+    &-noneStyle {
+        list-style: none;
+        padding: $mg_s;
+    }
+
+    &-rowdl {
+        dt {
+            margin : 0;
+            padding : 0;
+            float : left;
+            clear : both;
+            width : 20%;
+            font-weight:normal;
+            padding :15px 5px;
+        }
+        dd {
+            margin : 0;
+            padding :15px 5px 15px 20%;
+            border-bottom: #EEE 1px solid;
+        }
+        @include mq-sp {
+            dt {
+                width: 30%;
+            }
+            dd {
+                padding-left: 30%;
+            }
+        }
+    }
+
+    &-imglist {
+        padding: 0 8px;
+        list-style: none;
+        li {
+            margin-bottom: $mg_s;
+            a {
+                img {
+                    width:100%;
+                }
+                span {
+                    display: block;
+                    font-size: $fnt_size_l;
+                    padding: 10px $mg_s;
+                    color: #FFF;
+                    background-image: url(../../assets/img/common/common_icon_01.png);
+                    background-position: right 15px center;
+                    background-repeat: no-repeat;
+                    @include transition(all 0.3s ease);
+                }
+                &:hover,
+                &:focus{
+                    span {
+                        background-position: right 10px center;
+                        opacity: 0.9;
+                        @include transition(all 0.3s ease);
+                    }
+                }
+            }
+        }
+        .col-md-4 {
+            padding: 0 7px;
+        }
+    }
+    &-imgAnchorList {
+        padding: 0;
+        list-style: none;
+        li{
+            @include clearfix;
+            background: url(../../assets/img/common/common_icon_04.png) right $mg_m center no-repeat;
+            border-bottom: #EEE 1px solid;
+            padding: $mg_s 0;
+            a {
+                display: block;
+            }
+        }
+        &-img {
+            width: 18%;
+            float: left;
+            padding-left: $mg_m;
+            margin: 0;
+            img {
+                width: 100%;
+            }
+        }
+        dl {
+            width: 82%;
+            float: right;
+            padding: 0 $mg_l 0 $mg_m;
+            margin: 0;
+            dt, dd {
+                padding-top:5px;
+                padding-bottom: 5px;
+            }
+        }
+        @include mq-sp {
+            &-img {
+                width: 100%;
+                float: none;
+                padding: 0 0 $mg_s $mg_s;
+                text-align: center;
+                img {
+                    width:70%;
+                }
+            }
+            .list-rowdl {
+                width: 100%;
+                float: none;
+                padding: 0 $mg_m 0 $mg_s;
+            }
+        }
+    }
+}
+
+.tbl {
+    &-wide {
+        width: 100%;
+        border-collapse: collapse;
+        tr {
+            th,td {
+                padding: 10px;
+                text-align: center;
+            }
+            th {
+                font-weight: normal;
+            }
+        }
+        &_blue {
+            th,td {
+                border: $clr_bg_sblue 1px solid;
+            }
+            th {
+                background: $clr_bg_sblue;
+                border-bottom: #FFF 1px solid;
+            }
+            caption {
+                color: $clr_blue;
+                font-weight: bold;
+                border-left: $clr_blue 4px solid;
+                padding: 0px 10px;
+                line-height: 1em;
+            }
+        }
+        &_spVertical {
+            @include mq-sp {
+                display: block;
+                @include clearfix;
+                tr {
+                    display: inline-block;
+                }
+                thead{
+                    display: block;
+                    float: left;
+                    overflow-x:scroll;
+                }
+                tbody{
+                    display: block;
+                    width: auto;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                }
+                th{
+                    display: block;
+                    width:auto;
+                }
+                tbody tr{
+                    display: inline-block;
+                    margin: 0 -3px;
+                }
+                td{
+                    display: block;
+                }
+            }
+        }
+
+        &_spHorizontal {
+            @include mq-sp {
+                display: block;
+                tbody {
+                    display: block;
+                    @include clearfix;
+                }
+                tr {
+                    display:block;
+                    float: left;
+                    width: 50%;
+                    margin-bottom: 10px;
+                }
+                th {
+                    display:block;
+                    width: 100%;
+                }
+                td {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* お問い合わせ */
+form {
+    .rowdl {
+        dt {
+            width: 13em;
+        }
+        dd {
+            padding-left: 13em;
+        }
+    }
+    .alert {
+        background:#FBEDEC;
+        @include border-radius(3px);
+        margin-top:1em;
+        padding:0.3em;
+    }
+    .alert-error,
+    .label-important {
+        color:#990000;
+        font-weight:bold;
+    }
+    input[type=text],
+    input[type=tel],
+    input[type=email],
+    textarea {
+        padding:5px;
+        border:#CCCCCC 1px solid;
+        @include border-radius(3px);
+        @include box-shadow(rgba(0,0,0,0.2) 0 0 4px inset,rgba(0,0,0,0.5) 1px 4px 9px -6px inset);
+    }
+    select {
+        padding: 5px;
+        @include border-radius(3px);
+        @include box-shadow(rgba(0,0,0,0.5) -3px -4px 9px -6px inset);
+        cursor: pointer;
+    }
+    textarea {
+        min-height: 10em;
+    }
+    input:focus {
+        border:solid 1px #3FB152;
+    }
+    label {
+        cursor: pointer;
+    }
+    .w {
+        &100 {
+            width: 100%;
+        }
+        &60 {
+            width: 60%;
+        }
+        &50 {
+            width: 50%;
+        }
+        &30 {
+            width: 30%;
+        }
+        &10 {
+            width: 10%;
+        }
+    }
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 3em;
+    background:#FFF;
+    color:#333;
+    @include border-radius(1px);
+    @include transition(all 0.3s ease);
+    &:hover {
+        background:#333;
+        color:#fff;
+        @include transition(all 0.3s ease);
+    }
+    &-green {
+        background:#FFF;
+        color:$clr_a_main;
+        border:$clr_a_main 1px solid;
+        &:hover {
+            background: $clr_a_main;
+            color:#FFF;
+        }
+    }
+    &-sblue {
+        background-color: $clr_sblue;
+        color: #FFF;
+        border: $clr_sblue 1px solid;
+        &:hover {
+            color: $clr_sblue;
+            background-color: #FFF;
+            border: $clr_sblue 1px solid;
+            @include transition(all 0.3s ease);
+        }
+    }
+    &-orange {
+        background-color: $clr_orange;
+        color: #FFF;
+        border: $clr_orange 1px solid;
+        &:hover {
+            color: $clr_orange;
+            background-color: #FFF;
+            border: $clr_orange 1px solid;
+            @include transition(all 0.3s ease);
+        }
+    }
+    &-l {
+        font-size: $fnt_size_l;
+    }
+    &-m {
+        font-size: $fnt_size_m;
+    }
+    &-s {
+        font-size: $fnt_size_s;
+    }
+    &-line_white {
+        background:url(../../assets/img/common/common_icon_01.png) right 15px center no-repeat;
+        border: #FFF 1px solid;
+        color: #FFF;
+        &:hover {
+            background: #FFF;
+            color: #333;
+            background:#FFF url(../../assets/img/common/common_icon_01.png) right 10px center no-repeat;
+        }
+    }
+    &-line_yellow {
+        background:$clr_yellow url(../../assets/img/common/common_icon_01.png) right 15px center no-repeat;
+        border: $clr_yellow 1px solid;
+        color: #FFF;
+        &:hover {
+            background: #FFF;
+            background: $clr_yellow url(../../assets/img/common/common_icon_01.png) right 10px center no-repeat;
+        }
+    }
+}
+
+.img {
+    &-wide {
+        img {
+            width: 100%;
+        }
+    }
+    &-cover {
+        padding: 0;
+        margin: 0;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.bg {
+    &-clr {
+        &_ygreen {
+            background-color: $clr_bg_ygreen;
+        }
+        &_orange {
+            background-color: $clr_bg_orange;
+        }
+        &_mgreen {
+            background-color: $clr_bg_mgreen;
+        }
+        &_blue {
+            background-color: $clr_bg_blue;
+        }
+        &_yellow {
+            background-color: $clr_bg_yellow;
+        }
+        &_sblue {
+            background-color: $clr_bg_sblue;
+        }
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.pager {
+    ul {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 0;
+        li {
+            display: inline-block;
+            font-size: $fnt_size_m;
+            a {
+                display: block;
+                padding: 0.7em 0.9em;
+                margin: 5px;
+                background-color: #CCC;
+                font-weight: bold;
+                &:hover,&:focus,&.current {
+                    opacity: .9;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+
+.curriculum {
+    margin-top: $mg_m;
+    &-img {
+        img {
+            width: 100%;
+        }
+    }
+    &-tit {
+        padding: 10px;
+        margin-top: 0;
+        font-size: $fnt_size_l;
+        font-weight: bold;
+        color: #FFF;
+        line-height: 1em;
+        span {
+            display: block;
+            font-size: $fnt_size_s;
+            padding-bottom: 5px;
+        }
+    }
+    &-class {
+        @include clearfix;
+        img, p {
+            float: left;
+        }
+        p {
+            padding-left: 10px;
+        }
+        &_1 {
+            img {
+                width: 25%;
+            }
+            p {
+                width: 75%;
+            }
+        }
+        &_2 {
+            img {
+                width: 40%;
+            }
+            p {
+                width: 60%;
+            }
+        }
+    }
+    &-movie {
+        @include clearfix;
+        img {
+            float: left;
+            width: 30%;
+        }
+        h3 {
+            margin-top: 0;
+        }
+        & > div {
+            float: left;
+            width: 70%;
+            padding-left: 10px;
+            .embedMovie {
+                iframe {
+                    width: 100%;
+                    height: auto;
+                }
+                &-thumbnail {
+                    list-style: none;
+                    padding: 0;
+                    @include clearfix;
+                    li {
+                        float: left;
+                        width: 25%;
+                        padding-right: 1%;
+                        &:last-child {
+                            padding-right: 0;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-study {
+        @include clearfix;
+        div, p {
+            float: left;
+        }
+        div {
+            width: 36%;
+            img {
+                width: 100%;
+            }
+        }
+        p {
+            width: 64%;
+            padding-right: $mg_s;
+        }
+        &_leftimg {
+            margin-top: $mg_s;
+            p {
+                padding: 0 0 0 $mg_s;
+            }
+        }
+    }
+    &-content {
+        &:nth-child(1) {
+            .curriculum {
+                &-tit {
+                    background-color: $clr_purple;
+                }
+            }
+            .mainSec-tit_3 {
+                color: $clr_purple;
+                border-left-color: $clr_purple;
+            }
+        }
+        &:nth-child(2) {
+            .curriculum {
+                &-tit {
+                    background-color: $clr_blue;
+                }
+            }
+            .mainSec-tit_3 {
+                color: $clr_blue;
+                border-left-color: $clr_blue;
+            }
+        }
+        &:nth-child(3) {
+            clear: both;
+            margin-top: $mg_m;
+            .curriculum {
+                &-tit {
+                    background-color: $clr_sblue;
+                }
+            }
+            .mainSec-tit_3 {
+                color: $clr_sblue;
+                border-left-color: $clr_sblue;
+            }
+            .embedMovie {
+                &-thumbnail {
+                    li {
+                        width: 33.33%;
+                    }
+                }
+            }
+        }
+        &:nth-child(4) {
+            margin-top: $mg_m;
+            .curriculum {
+                &-tit {
+                    background-color: $clr_tblue;
+                }
+            }
+            .mainSec-tit_3 {
+                color: $clr_tblue;
+                border-left-color: $clr_tblue;
+            }
+        }
+    }
+}

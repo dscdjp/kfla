@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+// パンくず
+
+.pageHeader {
+    &-pageName {
+        margin: 0;
+        text-align: center;
+        font-size: 32px;
+        padding: 1em 0;
+        color: #FFF;
+        &_ygreen {
+            background-color: $clr_ygreen;
+        }
+        &_orange {
+            background-color: $clr_orange;
+        }
+        &_mgreen {
+            background-color: $clr_mgreen;
+        }
+        &_blue {
+            background-color: $clr_blue;
+        }
+        &_sblue {
+            background-color: $clr_sblue;
+        }
+        &_yellow {
+            background-color: $clr_yellow;
+        }
+    }
+    &-breadcrumb {
+        ul {
+            margin-bottom: 0;
+            padding: $mg_s 0 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                font-size: $fnt_size_s;
+                &:after {
+                    content: $fa-var-angle-right;
+                    font-family: FontAwesome;
+                }
+                &:last-child:after {
+                    content: "";
+                }
+            }
+            @include mq-sp {
+                padding: $mg_s $mg_s 0;
+            }
+        }
+    }
+}
+
+.pageCatch {
+    text-align: center;
+    .mainSec-tit_2 {
+        margin: 0 0 $mg_m;
+    }
+    p {
+        line-height: 2em;
+    }
+}
+
+
+.mainSec {
+    &-container {
+        .container {
+            padding: $mg_s 0;
+        }
+    }
+    &-tit_2 {
+        margin: $mg_m 0;
+    }
+}
+
+.otherPageNavi {
+    padding: 0;
+    ul {
+        margin: 0;
+        padding: $mg_m 0 $mg_l;
+        list-style: none;
+        li {
+            margin-bottom: $mg_s;
+            a {
+                display: block;
+                color: #FFF;
+                font-size: 20px;
+                span {
+                    display: inline-block;
+                    padding: 50px $mg_m 0;
+                    line-height: 0;
+                    &:first-child {
+                        height: 120px;
+                        padding: 0;
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
+                }
+                &:hover {
+                    opacity: 0.9;
+                    @include transition(opacity 0.3s ease);
+                }
+            }
+            &:nth-child(odd) {
+                padding-left: 0;
+            }
+            &:nth-child(even) {
+                padding-right: 0;
+            }
+
+            @include mq-sp {
+                &:nth-child(odd) {
+                    padding-left: 15px;
+                }
+                &:nth-child(even) {
+                    padding-right: 15px;
+                }
+                a {
+                    display: table;
+                    span {
+                        display: table-cell;
+                        vertical-align: middle;
+                        line-height: 1em;
+                        padding: 0 $mg_m;
+                        &:first-child {
+                            width: 30%;
+                            height: auto;
+                            padding: 0;
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                    &:hover {
+                        opacity: 0.9;
+                        @include transition(opacity 0.3s ease);
+                    }
+                }
+            }
+        }
+    }
+    &_ygreen ul li a {
+        background: $clr_ygreen url(../../assets/img/common/common_icon_05.png) right $mg_m center no-repeat;
+    }
+    &_orange ul li a {
+        background: $clr_orange url(../../assets/img/common/common_icon_05.png) right $mg_m center no-repeat;
+    }
+    &_mgreen ul li a {
+        background: $clr_mgreen url(../../assets/img/common/common_icon_05.png) right $mg_m center no-repeat;
+    }
+    &_blue ul li a {
+        background: $clr_blue url(../../assets/img/common/common_icon_05.png) right $mg_m center no-repeat;
+    }
+    &_yellow ul li a {
+        background: $clr_yellow url(../../assets/img/common/common_icon_05.png) right $mg_m center no-repeat;
+    }
+    &_sblue ul li a {
+        background: $clr_sblue url(../../assets/img/common/common_icon_05.png) right $mg_m center no-repeat;
+    }
+}

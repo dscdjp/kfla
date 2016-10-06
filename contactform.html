@@ -1,0 +1,71 @@
+<div class="wpcf7c-elm-step2">
+    <h2 class="mainSec-tit_2">確認画面</h2>
+    <p>以下の内容で間違いがなければ、「送信する」ボタンを押してください。</p>
+</div>
+<div class="wpcf7c-elm-step3">
+    <h2 class="mainSec-tit_2">送信完了</h2>
+    <p class="text-center">
+        送信ありがとうございました。<br>
+        送信は正常に完了しました。
+    </p>
+</div>
+<div clas="wpcf7c-elm-step1 wpcf7c-elm-step2">
+    <table class="tbl-wide tbl-wide_blue tbl-wide_spHorizontal">
+        <tbody>
+            <tr>
+                <th>ご用件</th>
+                <td class="form-subject">
+                    [radio subject use_label_element default:1 "お問い合わせ" "資料請求"]
+                </td>
+            </tr>
+            <tr>
+                <th>お名前</th>
+                <td>
+                    [text* name-sei class:form-w50 placeholder akismet:author "姓"][text* name-mei class:form-w50 placeholder akismet:author "名"]
+                </td>
+            </tr>
+            <tr>
+                <th>フリガナ</th>
+                <td>
+                    [text* kana-sei class:form-w50 placeholder akismet:author "セイ"][text* kana-mei class:form-w50 placeholder akismet:author "メイ"]
+                </td>
+            </tr>
+            <tr>
+                <th>メールアドレス</th>
+                <td>
+                    [email* email class:form-w100 placeholder akismet:author_email "email-address@example.com"]
+                </td>
+            </tr>
+            <tr>
+                <th>ご住所（資料送付先）</th>
+                <td class="form-address">
+                    〒 [text zipcode class:form-zipcode placeholder "123-4567"]
+                    [select pref class:form-pref "北海道" "青森県" "岩手県" "宮城県" "秋田県" "山形県" "福島県" "茨城県" "栃木県" "群馬県" "埼玉県" "千葉県" "東京都" "神奈川県" "新潟県" "富山県" "石川県" "福井県" "山梨県" "長野県" "岐阜県" "静岡県" "愛知県" "三重県" "滋賀県" "京都府" "大阪府" "兵庫県" "奈良県" "和歌山県" "鳥取県" "島根県" "岡山県" "広島県" "山口県" "徳島県" "香川県" "愛媛県" "高知県" "福岡県" "佐賀県" "長崎県" "熊本県" "大分県" "宮崎県" "鹿児島県" "沖縄県"][text city class:form-city placeholder "市区町村"]
+                    [text address class:form-w100 placeholder "それ以降の住所"]
+                </td>
+            </tr>
+            <tr>
+                <th>電話番号</th>
+                <td>
+                    [tel tel class:form-tel placeholder "123-456-7890"]
+                </td>
+            </tr>
+            <tr>
+                <th>お問い合わせ内容</th>
+                <td>
+                    [textarea* message class:form-textarea placeholder "お問い合わせ内容を入力してください。"]
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="wpcf7c-elm-step1">
+    <p class="text-center form-submit">
+        [confirm class:btn class:btn-sblue class:btn-l "内容を確認"]
+    </p>
+</div>
+<div class="wpcf7c-elm-step2">
+    <p class="text-center form-submit">
+        [back class:btn class:btn-l "前画面に戻る"] [submit class:btn class:btn-sblue class:btn-l "送信する"]
+    </p>
+</div>

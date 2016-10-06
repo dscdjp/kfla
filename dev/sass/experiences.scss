@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+// reason.scss
+
+.mainSec {
+    &-content {
+        padding: $mg_m 0;
+        background-color: #FFF;
+        dl {
+            dd a {
+                display: block;
+                text-decoration: underline;
+                background: url(../../assets/img/common/common_icon_03.png) right $mg_s center no-repeat;
+                padding-right: $mg_m;
+            }
+        }
+    }
+}
+
+.pager ul li a {
+    &:hover,&:focus,&.current {
+        background-color: $clr_orange;
+        color: #FFF;
+    }
+}
+
+.list {
+    &-rowdl dt {
+        text-align: center;
+    }
+}

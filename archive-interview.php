@@ -1,0 +1,80 @@
+<?php get_header(); global $theme_color;?>
+
+<main role="main">
+    <section class="mainSec-container mainSec-container_<?=$theme_color?>">
+        <div class="container">
+            <div class="mainSec-content">
+                <ul class="list-imgAnchorList">
+                    <?php
+                    if(have_posts()) :
+                    while(have_posts()) :
+                    the_post();
+                    // 画像取得
+                    $img = get_field('image');
+                    $imgurl = wp_get_attachment_image_src($img, 'thumb-2x');
+                    // 名前・コメント取得
+                    $name = get_field('name')?get_field('name'):'&nbsp;';
+                    $birthplace = get_field('birthplace')?get_field('birthplace'):'&nbsp;';
+                    $comment = mb_substr(strip_tags(get_the_content()),0,72).'...';
+                    ?>
+                    <li>
+                        <a href="<?php the_permalink(); ?>">
+                            <p class="list-imgAnchorList-img">
+                                <img src="<?=$imgurl[0]?>" alt="<?=$name?>">
+                            </p>
+                            <dl class="list-rowdl">
+                                <dt>氏名</dt>
+                                <dd><?=$name?></dd>
+                                <dt>出身地</dt>
+                                <dd><?=$birthplace?></dd>
+                                <dt>コメント</dt>
+                                <dd>
+                                    <?=$comment?>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <?php endwhile; endif; ?>
+                </ul>
+                <?php
+                if (function_exists("pager")) {
+                    pager($teacher_list->max_num_pages);
+                }
+                wp_reset_query();
+                ?>
+            </div>
+        </div>
+    </section>
+    <div class="bg-clr_blue">
+        <nav class="otherPageNavi otherPageNavi_<?=$theme_color?> container">
+            <ul class="row">
+                <li class="col-sm-6 col-md-6">
+                    <a href="<?=home_url('/schoollife/parttime/')?>">
+                        <span><img src="<?=get_template_directory_uri()?>/assets/img/schoollife/bnr_img_01.jpg"></span>
+                        <span>課外活動/アルバイト</span>
+                    </a>
+                </li>
+                <li class="col-sm-6 col-md-6">
+                    <a href="<?=home_url('/schoollife/curriculum/')?>">
+                        <span><img src="<?=get_template_directory_uri()?>/assets/img/schoollife/bnr_img_05.jpg"></span>
+                        <span>授業について</span>
+                    </a>
+                </li>
+                <li class="col-sm-6 col-md-6">
+                    <a href="<?=home_url('/schoollife/dormitory/')?>">
+                        <span><img src="<?=get_template_directory_uri()?>/assets/img/schoollife/bnr_img_02.jpg"></span>
+                        <span>学生寮について</span>
+                    </a>
+                </li>
+                <li class="col-sm-6 col-md-6">
+                    <a href="<?=home_url('/schoollife/scholarship/')?>">
+                        <span><img src="<?=get_template_directory_uri()?>/assets/img/schoollife/bnr_img_03.jpg"></span>
+                        <span>奨学金について</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</main>
+
+<?php get_footer(); ?>

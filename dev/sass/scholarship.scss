@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+.scholarship {
+    em {
+        color: $clr_blue;
+        font-weight: bold;
+        font-style: normal;
+    }
+    &-stipendiary {
+        dt {
+            width: 50%;
+        }
+        dd {
+            padding-left: 50%;
+        }
+    }
+}
+
+.stipendiary {
+    &-img {
+        img {
+            width: 100%;
+        }
+    }
+    &-end {
+        font-size: 21px;
+        line-height: 1.5em;
+        text-align: center;
+        margin: $mg_m 0 0;
+        em {
+            font-style: normal;
+            color: $clr_blue;
+            font-weight: bold;
+        }
+    }
+}
+
+.list {
+    &-rowdl dt {
+        text-align: center;
+    }
+}

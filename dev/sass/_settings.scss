@@ -1,0 +1,94 @@
+// **********************************
+// 初期設定
+// **********************************
+
+// **********************************
+// 初期設定
+// **********************************
+
+// コンテンツ幅
+$cont_width:960px;
+
+// 余白
+$mg_s:15px;
+$mg_m:30px;
+$mg_l:60px;
+
+// 色
+$clr_common:#333333; // テーマカラー
+
+$clr_bg_main:#FFF; //背景メインカラー
+$clr_bg_sub:#f3f3f3; //背景サブカラー
+
+$clr_txt_main:#585858; //通常テキスト メインカラー
+$clr_txt_sub:#999; //通常テキスト サブカラー
+
+$clr_a_main:$clr_common; //テキストリンク カラー
+$clr_a_sub:#0095E1; //テキストリンク ホバー・フォーカスカラー
+
+// その他カラー一覧
+$clr_ygreen:#A2B00D; // イエローグリーン
+$clr_mgreen:#358C5A; // モスグリーン
+$clr_sblue:#0095E1; // スカイブルー
+
+$clr_red:#D8441D; // レッド
+$clr_orange:#EB672C; // オレンジ
+
+// ブルー系
+$clr_purple:#6363B6; // パープル
+$clr_blue:#5474BB; // ブルー
+$clr_pblue:#549CD2; // パステルブルー
+$clr_tblue:#50B4C8; // ターコイズブルー
+
+// イエロー系
+$clr_yellow:#F3AF29; // イエロー
+$clr_cyellow:#FDEE7B; // クリームイエロー
+$clr_lbeige:#EFDBB3; // ライトベージュ
+$clr_dbeige:#E9CFAF; // ディーブベージュ
+
+$clr_bg_ygreen:#F6F7E6;
+$clr_bg_orange:#FDF0E9;
+$clr_bg_mgreen:#F6F7E6;
+$clr_bg_blue:#EEF1F8;
+$clr_bg_sblue:#E6F4FF;
+$clr_bg_yellow:#FFFFDB;
+
+// フォント
+$fnt_size_l:16px;
+$fnt_size_m:14px;
+$fnt_size_s:12px;
+
+$fnt_lh_s:1.2em;
+$fnt_lh_m:1.6em;
+$fnt_lh_l:2em;
+
+$letter-spacing:0.05em;
+
+
+// ブレイクポイント
+$width-pc: 960px;
+$width-tablet: 768px;
+$width-smartphone: 480px;
+$width-scrollbar: 20px;
+
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/fonts/nato-sans/NotoSansCJKjp-Light.eot');
+    src: url('../../assets/fonts/nato-sans/NotoSansCJKjp-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/nato-sans/NotoSansCJKjp-Light.woff') format('woff'),
+        url('../../assets/fonts/nato-sans/NotoSansCJKjp-Light.ttf')  format('truetype');
+}
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../assets/fonts/nato-sans/NotoSansCJKjp-Bold.eot');
+    src: url('../../assets/fonts/nato-sans/NotoSansCJKjp-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/nato-sans/NotoSansCJKjp-Bold.woff') format('woff'),
+        url('../../assets/fonts/nato-sans/NotoSansCJKjp-Bold.ttf')  format('truetype');
+}
+$fnt_family_main: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "Noto Sans Japanese" , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+$fnt_family_sub:"Roboto Slab" , Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;

@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+
+.mainSec {
+    &-tit_1 {
+        @include clearfix;
+        line-height: 1;
+        time {
+            display: block;
+            float: right;
+            font-size: $fnt_size_l;
+            padding-top: 7px;
+        }
+    }
+    &-tit_2 {
+        margin: 0 0 $mg_m;
+    }
+    &-img {
+        img {
+            width: 100%;
+        }
+    }
+    &-content {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.list {
+    &-rowdl dt {
+        text-align: center;
+    }
+}

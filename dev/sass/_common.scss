@@ -1,0 +1,504 @@
+// **********************************
+// 共通設定
+// **********************************
+
+body,html {
+    font-family:$fnt_family_main;
+    font-size:$fnt_size_m;
+    line-height:$fnt_lh_m;
+    letter-spacing: $letter-spacing;
+    color:$clr_txt_main;
+    background:$clr_bg_main;
+}
+
+// リンク
+a {
+    color: $clr_a_main;
+    @include transition(color 0.3s ease);
+    img {
+        background: rgba(255,255,255,.01);
+    }
+}
+
+a:hover,
+a:focus {
+    color: $clr_a_sub;
+    text-decoration: none;
+    @include transition(color 0.3s ease);
+}
+
+a:hover img,
+a:focus img {
+    @include opacity(0.7);
+    @include transition(all 0.3s ease);
+}
+
+
+
+// **********************************
+// レイアウト設定
+// **********************************
+
+.container {
+    width:$cont_width;
+    min-width:$cont_width;
+    @include mq-sp {
+        width: 100%;
+        min-width:100%;
+    }
+}
+
+
+// ヘッダー
+.pageHeader {
+    &-logo {
+        a {
+            img {
+                width: 100%;
+                @include mq-sp {
+                    height: 30px;
+                    width: auto;
+                }
+            }
+            &:hover {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+        @include mq-sp {
+            margin: 0;
+            padding: 5px $mg_s $mg_s;
+        }
+    }
+    &-langNav {
+        ul {
+            padding: 0;
+            margin-top: 10px;
+            list-style: none;
+            li {
+                display: inline-block;
+                font-size: $fnt_size_s;
+                &:after {
+                    content:" / ";
+                }
+                &:last-child:after {
+                    content:"";
+                }
+            }
+        }
+    }
+    .spLangNavi {
+        @include mq-sp {
+            position: fixed;
+            background: #FFF;
+            text-align: center;
+            width: 100%;
+            top: 308px;
+            left: -100%;
+            z-index: 9999;
+            @include transition(all 0.3s ease);
+            &.open {
+                left: 0;
+                @include transition(all 0.3s ease);
+            }
+        }
+    }
+    &-contactBtn {
+        background: $clr_sblue url(../../assets/img/common/common_icon_01.png) right 10px center no-repeat;
+        color: #FFF;
+        &:hover {
+            background: $clr_sblue url(../../assets/img/common/common_icon_01.png) right 5px center no-repeat;
+        }
+    }
+
+    .gnavi {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            @include clearfix;
+            li {
+                display: block;
+                float: left;
+                width: 16.6666%;
+                a {
+                    display: block;
+                    text-align: center;
+                    padding: 0.7em;
+                    color: #FFF;
+                    &:hover {
+                        opacity: 0.9;
+                        @include transition(opacity 0.3s ease);
+                    }
+                }
+                &:nth-child(1) a {
+                    background-color: $clr_ygreen;
+                }
+                &:nth-child(2) a {
+                    background-color: $clr_orange;
+                }
+                &:nth-child(3) a {
+                    background-color: $clr_mgreen;
+                }
+                &:nth-child(4) a {
+                    background-color: $clr_blue;
+                }
+                &:nth-child(5) a {
+                    background-color: $clr_sblue;
+                }
+                &:nth-child(6) a {
+                    background-color: $clr_yellow;
+                }
+            }
+        }
+        @include mq-sp {
+            position: fixed;
+            width: 100%;
+            top: 59px;
+            right: -100%;
+            z-index: 9998;
+            @include transition(all 0.3s ease);
+            &.open {
+                right: 0;
+                @include transition(all 0.3s ease);
+            }
+            ul {
+                padding: 0 0 !important;
+                li {
+                    float: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .spHeader {
+        background-color: #FFF;
+        // スマホ
+        @include mq-sp {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            padding: 0;
+            .row {
+                @include mq-sp {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .hnavi {
+        &-trigger,
+        &-trigger span {
+            display: inline-block;
+            transition: all .4s;
+            box-sizing: border-box;
+        }
+        &-trigger {
+            position: absolute;
+            top: $mg_s;
+            right: $mg_s;
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+        }
+        &-trigger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            @include border-radius(1px);
+        }
+        &-trigger span:nth-of-type(1) {
+            top: 0;
+        }
+        &-trigger span:nth-of-type(2) {
+            top: 10px;
+        }
+        &-trigger span:nth-of-type(3) {
+            bottom: 0;
+        }
+        &-trigger.active {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+        &-trigger.active span:nth-of-type(1) {
+            -webkit-transform: translateY(10px) rotate(-45deg);
+            transform: translateY(10px) rotate(-45deg);
+        }
+        &-trigger.active span:nth-of-type(2) {
+            -webkit-transform: translateY(0) rotate(45deg);
+            transform: translateY(0) rotate(45deg);
+        }
+        &-trigger.active span:nth-of-type(3) {
+            opacity: 0;
+        }
+    }
+    @include mq-sp {
+        padding-top: 59px;
+    }
+}
+
+
+// メイン
+
+.mainSec {
+    &-tit {
+        &_1 {
+            background-image: url(../../assets/img/common/tit_bg_01.png);
+            background-position: right center;
+            background-repeat: no-repeat;
+            font-size: 26px;
+            font-weight: normal;
+            color: #FFF;
+            padding: 0.5em 1em;
+            margin: 0;
+        }
+        &_2 {
+            font-size: 23px;
+        }
+        &_3 {
+            font-size: $fnt_size_m;
+            font-weight: bold;
+            border-left: 4px solid;
+            padding-left: 6px;
+        }
+    }
+    &-content {
+        background: rgba(255,255,255,0.5);
+        padding: $mg_m $mg_s;
+    }
+    &-container {
+        .container {
+            padding: $mg_l 0;
+        }
+        &_ygreen {
+            background-color: $clr_bg_ygreen;
+            .mainSec-tit {
+                &_1 {
+                    background-color: $clr_ygreen;
+                }
+                &_2 {
+                    color: $clr_ygreen;
+                }
+                &_3 {
+                    color: $clr_ygreen;
+                }
+            }
+        }
+        &_orange {
+            background-color: $clr_bg_orange;
+            .mainSec-tit {
+                &_1 {
+                    background-color: $clr_orange;
+                }
+                &_2 {
+                    color: $clr_orange;
+                }
+                &_3 {
+                    color: $clr_orange;
+                }
+            }
+        }
+        &_mgreen {
+            background-color: $clr_bg_mgreen;
+            .mainSec-tit {
+                &_1 {
+                    background-color: $clr_mgreen;
+                }
+                &_2 {
+                    color: $clr_mgreen;
+                }
+                &_3 {
+                    color: $clr_mgreen;
+                }
+            }
+        }
+        &_blue {
+            background-color: $clr_bg_blue;
+            .mainSec-tit {
+                &_1 {
+                    background-color: $clr_blue;
+                }
+                &_2 {
+                    color: $clr_blue;
+                }
+                &_3 {
+                    color: $clr_blue;
+                }
+            }
+        }
+        &_sblue {
+            background-color: $clr_bg_sblue;
+            .mainSec-tit {
+                &_1 {
+                    background-color: $clr_sblue;
+                }
+                &_2 {
+                    color: $clr_sblue;
+                }
+                &_3 {
+                    color: $clr_sblue;
+                }
+            }
+        }
+        &_yellow {
+            background-color: $clr_bg_yellow;
+            .mainSec-tit {
+                &_1 {
+                    background-color: $clr_yellow;
+                }
+                &_2 {
+                    color: $clr_yellow;
+                }
+                &_3 {
+                    color: $clr_yellow;
+                }
+            }
+        }
+    }
+}
+
+// フッター
+
+.pageFooter {
+    background-color: #F7F7F7;
+    padding-top: $mg_l;
+    &-navi {
+        margin: 0 -30px 0;
+        div {
+            dl {
+                margin-bottom: $mg_m;
+                dt a {
+                    display: block;
+                    margin-bottom: 10px;
+                    padding: 0.7em;
+                    color: #FFF;
+                    font-size: $fnt_size_l;
+                    font-weight: normal;
+                    &:hover {
+                        opacity: 0.8;
+                        @include transition(all 0.3s ease);
+                    }
+                }
+                dd a {
+                    display: block;
+                    background: url(../../assets/img/common/common_icon_04.png) right 10px center no-repeat;
+                    padding: 10px;
+                    @include transition(all 0.3s ease);
+                    &:hover {
+                        background: url(../../assets/img/common/common_icon_04.png) right 0px center no-repeat;
+                        @include transition(all 0.3s ease);
+                    }
+                }
+            }
+            &:nth-child(1) dl dt a {
+                background-color: $clr_ygreen;
+            }
+            &:nth-child(2) dl dt a {
+                background-color: $clr_orange;
+            }
+            &:nth-child(3) dl dt a {
+                background-color: $clr_blue;
+            }
+            &:nth-child(4) dl dt a {
+                background-color: $clr_yellow;
+            }
+        }
+        @include mq-sp {
+            margin: 0 -15px 0;
+        }
+    }
+    &-bnr {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-left: -30px;
+            margin-right: -30px;
+            li {
+                a {
+                    display: block;
+                    color: #FFF;
+                    height: 120px;
+                    padding: 30px;
+                    text-align: center;
+                    img {
+                        margin: 10px;
+                    }
+                    &:hover {
+                        opacity: 0.9;
+                        img {
+                            opacity: 1;
+                        }
+                        @include transition(opacity 0.3s ease);
+                    }
+                }
+                &:nth-child(1) a {
+                    background-color: $clr_orange;
+                    font-size:20px;
+                    line-height: 1.5em;
+                    span {
+                        display: block;
+                        float: left;
+                        &:first-child {
+                            width: 30%;
+                            text-align: right;
+                        }
+                        &:last-child {
+                            width: 70%;
+                        }
+                    }
+                }
+                &:nth-child(2) a {
+                    background-color: $clr_sblue;
+                    font-size:20px;
+                }
+                &:nth-child(3) a {
+                    background-color: #3B5997;
+                    font-size:24px;
+                    img {
+                        margin: 5px;
+                    }
+                }
+                @include mq-sp {
+                    margin-bottom: $mg_s;
+                }
+            }
+
+            @include mq-sp {
+                margin: 0 -15px 0;
+            }
+        }
+    }
+    &-bottom {
+        text-align: center;
+        background-color: #FDEFD4;
+        border-top: $clr_yellow 2px solid;
+        margin-top: $mg_l;
+        padding: $mg_m 0;
+    }
+    &-logo {
+        width: 320px;
+        margin: 0 auto $mg_s;
+        img {
+            width: 100%;
+        }
+        &:hover {
+            img {
+                opacity: 1;
+            }
+        }
+        @include mq-sp {
+            width: 80%;
+        }
+    }
+    &-address {
+        margin-bottom: $mg_s/2;
+    }
+    &-copy {
+        font-size: $fnt_size_s - 2px;
+    }
+}

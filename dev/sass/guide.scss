@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+// reason.scss
+
+@include mq-sp {
+    .greeting {
+        &-img {
+            float: left;
+            margin-bottom: $mg_s;
+            &_w50 {
+                width: 50%;
+            }
+            &_w30 {
+                width: 30%;
+            }
+        }
+        &-text {
+            float: right;
+            padding-left: $mg_s;
+            &_w50 {
+                width: 50%;
+            }
+            &_w70 {
+                width: 70%;
+            }
+        }
+        &-name {
+            text-align: right;
+            font-size: $fnt_size_l;
+            @include mincho;
+            em {
+                display: block;
+                font-size: 23px;
+                font-style: normal;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.access {
+    iframe {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+.check {
+    color: $clr_orange;
+    font-size: $fnt_size_s;
+}

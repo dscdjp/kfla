@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+// reason.scss
+
+.result {
+    font-size: 21px;
+    font-weight: bold;
+    .mainSec {
+        &-content {
+            background: #FFBFD0 url(../../assets/img/result/main_bg_01.png) center top / contain no-repeat;
+        }
+    }
+    &-mainimg {
+        margin: 0 -15px;
+        img {
+            width: 100%;
+        }
+    }
+    &-3p {
+        margin-top: -120px;
+        margin-bottom: $mg_l;
+        p {
+            margin-right: -10px;
+            img {
+                width: 100%;
+            }
+        }
+        @include mq-sp {
+            margin-top: 0;
+            p {
+                text-align: center;
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    &-kyutei {
+        margin: -$mg_m 0 $mg_l;
+        color: #333;
+        font-size: $fnt_size_l;
+    }
+    &-num {
+        & > div {
+            position: relative;
+            &.col-sm-7 {
+                padding-right: 0;
+                @include mq-sp {
+                    padding-right: 15px;
+                }
+            }
+            & > div {
+                padding-top: $mg_l;
+                background: rgba(255,255,255,.8);
+                h2 img {
+                    margin-top: -30px;
+                }
+            }
+            @include mq-sp {
+                margin-bottom: $mg_l;
+            }
+        }
+    }
+    &-titTxt {
+        position: absolute;
+        height: 61px;
+        top: -30px;
+        left: 15px;
+        img {
+            height: 100%;
+        }
+        @include mq-sp {
+            height: 50px;
+            top: -25px;
+        }
+    }
+    &-titNum {
+        position: absolute;
+        height: 70px;
+        top: -40px;
+        right: 15px;
+        img {
+            height: 100%;
+        }
+        @include mq-sp {
+            height: 55px;
+            top: -30px;
+        }
+    }
+    &-list {
+        margin: 0 15px;
+        dt,dd {
+            height: 45px;
+            span {
+                padding: 5px;
+                background-color: #FFF2F5;
+            }
+        }
+        dt {
+            font-size: 20px;
+            float: left;
+            clear: both;
+            span {
+                position: relative;
+                z-index: 9998;
+            }
+        }
+        dd {
+            font-size: 35px;
+            font-weight: bold;
+            background: url(../../assets/img/result/main_bg_02.gif) left top 15px repeat-x;
+            text-align: right;
+            position: relative;
+            span {
+                display: inline-block;
+                position: relative;
+                top: -15px;
+                z-index: 9998;
+                color: #CC0000;
+                text-shadow:
+                    -2px -2px $clr_yellow,
+                    2px -2px $clr_yellow,
+                    -2px 2px $clr_yellow,
+                    2px 2px $clr_yellow
+                ;
+            }
+        }
+    }
+    &-warning {
+        margin-top: $mg_s;
+        font-size: $fnt_size_l;
+        @include mq-sp {
+            margin-top: 0;
+        }
+    }
+    &-other {
+        padding: 0 20px 10px;
+    }
+}
+
+.kyutei {
+    background: rgba(255,255,255,.8);
+
+    &-download,
+    &-website {
+        background-color:$clr_bg_orange;
+        padding: $mg_s;
+        margin-bottom: $mg_m;
+    }
+    &-download {
+        .btn-orange {
+            width: 100%;
+        }
+    }
+    &-website {
+        h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: $fnt_size_m;
+            color: $clr_orange;
+            padding-bottom: $mg_s;
+            margin-bottom: $mg_s;
+        }
+        p {
+            font-size: 0;
+            a {
+                font-size: $fnt_size_l;
+                width: 45%;
+                margin: 1%;
+                @include mq-sp {
+                    padding: 0.5em 0;
+                }
+            }
+        }
+    }
+}

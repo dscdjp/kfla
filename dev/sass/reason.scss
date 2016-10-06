@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+// common import
+@import "compass";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+@import "settings";
+@import "parts";
+@import "common";
+@import "subpage";
+
+// reason.scss
+
+.mainSec {
+    &-container {
+        &:nth-child(1) .mainSec-content {
+            background: rgba(255,255,255,0.5) url(../../assets/img/guide/main_bg_01.png) left $mg_m top $mg_m no-repeat;
+        }
+        &:nth-child(2) .mainSec-content {
+            background: rgba(255,255,255,0.5) url(../../assets/img/guide/main_bg_02.png) left $mg_m top $mg_m no-repeat;
+            min-height: 320px;
+        }
+        &:nth-child(3) .mainSec-content {
+            background: rgba(255,255,255,0.5) url(../../assets/img/guide/main_bg_03.png) left $mg_m top $mg_m no-repeat;
+        }
+        &:nth-child(4) .mainSec-content {
+            background: rgba(255,255,255,0.5) url(../../assets/img/guide/main_bg_04.png) left $mg_m top $mg_m no-repeat;
+        }
+    }
+}
+
+.fukuokaRank {
+    @include clearfix;
+    text-align: center;
+    margin: $mg_s 0;
+    &-content {
+        background-color: $clr_bg_ygreen;
+        width: 220px;
+        height: 220px;
+        @include border-radius(110px);
+        margin: 0 $mg_s;
+        float: left;
+        h2 {
+            font-size: $fnt_size_l + 2px;
+            font-weight: bold;
+            color: $clr_ygreen;
+            padding-top: 1.5em;
+            line-height: 1.5em;
+        }
+        p {
+            font-size: $fnt_size_l;
+            em {
+                color: $clr_ygreen;
+                font-size: 27px;
+                font-weight: bold;
+                font-style: normal;
+            }
+            &.small {
+                font-size: $fnt_size_s;
+            }
+        }
+        &:first-child {
+            margin-left: 90px + $mg_s;
+        }
+        &:nth-child(4) {
+            margin-left: 215px + $mg_s;
+            h2 {
+                margin: 2em 0 1em;
+            }
+        }
+        @include mq-sp {
+            float: none;
+            margin: 0 auto;
+            &:first-child {
+                margin-left: auto;
+            }
+            &:nth-child(4) {
+                margin-left: auto;
+            }
+        }
+    }
+}
