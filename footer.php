@@ -31,7 +31,7 @@
                     <dd><a href="<?=home_url('/event/news/')?>">お知らせ</a></dd>
                     <dd><a href="<?=home_url('/event/event/')?>">年中行事</a></dd>
                     <dd><a href="<?=home_url('/event/briefing/')?>">進学説明会</a></dd>
-                    <dd><a href="<?=home_url('/event/lecture/')?>">来訪講演会</a></dd>
+                    <dd><a href="<?=home_url('/event/lecture/')?>">著名な学者による講演会</a></dd>
                 </dl>
             </div>
         </nav>

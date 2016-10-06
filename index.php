@@ -193,7 +193,7 @@
                             <a href="#briefing">進学説明会</a>
                         </li>
                         <li>
-                            <a href="#lecture">来訪講演会</a>
+                            <a href="#lecture">著名な学者による講演会</a>
                         </li>
                     </ul>
                     <div id="news" class="tab-content">

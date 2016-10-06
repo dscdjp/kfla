@@ -14,12 +14,13 @@
 
 .tab {
     &-menu {
-        list-style: none;
+        display: table;
+        width: 100%;
         padding: 0;
         margin: 0;
         @include clearfix;
         li {
-            float: left;
+            display: table-cell;
             width: 25%;
             a {
                 display: block;

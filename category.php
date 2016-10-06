@@ -14,7 +14,7 @@
                     <a href="<?=home_url('/event/briefing/')?>">進学説明会</a>
                 </li>
                 <li>
-                    <a href="<?=home_url('/event/lecture/')?>">来訪講演会</a>
+                    <a href="<?=home_url('/event/lecture/')?>">著名な学者による講演会</a>
                 </li>
             </ul>
             <div class="tab-content tab-content_<?=$tab_color?>">
