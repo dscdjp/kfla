@@ -94,10 +94,17 @@
                     </ul>
                     <div class="row">
                         <div class="col-sm-6 col-md-6 embedMovie">
-                            <div class="embedMovie-player">
-                                <div id="player"></div>
+                            <div class="wrap embedMovie-player" id="MainPhoto">
+                                <iframe src="http://player.youku.com/embed/XMTczMzY5Njc0OA" frameborder="0"></iframe>
                             </div>
-                            <ul id="thumbnail" class="embedMovie-thumbnail"></ul>
+                            <ul id="thumbnail" class="embedMovie-thumbnail">
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_1.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMzY5Njc0OA');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_2.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTcyNzUwNTgyMA');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_3.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMjYxODA0NA');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_4.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMzgxNTczNg');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_5.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMzgxODk0NA');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_6.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMTMyMjYwNA');"></li>
+                            </ul>
                         </div>
                         <div class="col-sm-6 col-md-6 embedChart">
                             <p>

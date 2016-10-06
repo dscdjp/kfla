@@ -71,15 +71,6 @@
 //            }
         }
     }
-    @media only screen and (min-width: 1170px + $width-scrollbar) {
-        background: #F7F7F7;
-        .swiper {
-            &-container, &-slide {
-                width: 1170px;
-                margin: 0 auto;
-            }
-        }
-    }
 }
 
 .pageHeader .gnavi ul {
@@ -311,17 +302,11 @@
         a {
             display: block;
             @include clearfix;
-            color: #333;
-            .btn {
-                border-color: #333;
-                color: #333;
-                background: url(../../assets/img/common/common_icon_04.png) right 15px center no-repeat;
-            }
             &:hover {
                 .btn {
-                    border-color: #333;
+                    background: #FFF;
                     color: #333;
-                    background: rgba(255,255,255,.08) url(../../assets/img/common/common_icon_04.png) right 10px center no-repeat;
+                    background:#FFF url(../../assets/img/common/common_icon_01.png) right 10px center no-repeat;
                 }
             }
         }
@@ -343,13 +328,13 @@
         }
         &Cont {
             padding: $mg_m $mg_l*2 $mg_l*1.5 $mg_m;
-            color: #333;
+            color: #FFF;
             position: static;
             p:first-child {
                 font-size: 26px;
                 line-height: 1em;
-                border-top: #333 1px solid;
-                border-bottom: #333 1px solid;
+                border-top: #FFF 1px solid;
+                border-bottom: #FFF 1px solid;
                 padding: 10px 0;
                 margin-bottom: $mg_m;
             }
@@ -394,7 +379,7 @@
             float: left;
             width: 15.6666%;
             margin: 0.5%;
-            img {
+            input {
                 width: 100%;
             }
         }
