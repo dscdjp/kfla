@@ -240,7 +240,7 @@
                     <li class="col-sm-6 col-md-6">
                         <a href="<?=home_url('/guide/reason/')?>">
                             <span><img src="<?=get_template_directory_uri()?>/assets/img/guide/bnr_img_02.jpg"></span>
-                            <span>九外を選ぶ理由</span>
+                            <span>私が九外に決めた理由</span>
                         </a>
                     </li>
                     <li class="col-sm-6 col-md-6">

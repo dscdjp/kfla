@@ -61,7 +61,7 @@
 
         <div class="wideBnr-reason">
             <a href="<?=home_url('/guide/reason/')?>">
-                <p>九州外国語学院<br>を選ぶ理由</p>
+                <p>私が九外に<br>決めた理由</p>
                 <p><span class="btn btn-s btn-line_white">詳細はこちら</span></p>
             </a>
         </div>
