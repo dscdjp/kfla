@@ -16,6 +16,7 @@
                         // 名前・コメント取得
                         $name = get_field('name')?get_field('name'):'&nbsp;';
                         $comment = get_field('comment')?get_field('comment'):'&nbsp;';
+                        $bio = get_field('bio')?get_field('bio'):'&nbsp;';
                         ?>
                         <li>
                             <p class="list-imgAnchorList-img">
@@ -24,6 +25,10 @@
                             <dl class="list-rowdl">
                                 <dt>氏名</dt>
                                 <dd><?=$name?></dd>
+                                <dt>略歴</dt>
+                                <dd>
+                                    <?=$bio?>
+                                </dd>
                                 <dt>コメント</dt>
                                 <dd>
                                     <?=$comment?>
