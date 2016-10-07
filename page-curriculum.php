@@ -71,10 +71,16 @@
                                 <div>
                                     <h3 class="mainSec-tit_3">授業風景</h3>
                                     <div class="embedMovie">
-                                        <div class="embedMovie-player">
-                                            <div id="player1"></div>
+                                        <div class="wrap embedMovie-player" id="MainPhoto">
+                                            <iframe src="http://player.youku.com/embed/XMTc0MTMwODk5Ng" frameborder="0"></iframe>
                                         </div>
-                                        <ul id="thumbnail1" class="embedMovie-thumbnail"></ul>
+
+                                        <ul id="thumbnail" class="embedMovie-thumbnail">
+                                            <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/schoollife/curriculum_youku_1.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTc0MTMwODk5Ng');"></li>
+                                            <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/schoollife/curriculum_youku_2.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTc0MTMxMjMxNg');"></li>
+                                            <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/schoollife/curriculum_youku_3.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTc0MTMxMzU2MA');"></li>
+                                            <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/schoollife/curriculum_youku_4.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTc0MTMxNTA0MA');"></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -97,10 +103,15 @@
                                 <img src="<?=get_template_directory_uri()?>/assets/img/schoollife/main_img_15.jpg">
                                 <div>
                                     <div class="embedMovie">
-                                        <div class="embedMovie-player">
-                                            <div id="player2"></div>
+                                        <div class="wrap embedMovie-player" id="MainPhoto">
+                                            <iframe src="http://player.youku.com/embed/XMTczMzczMTEzNg" frameborder="0"></iframe>
                                         </div>
-                                        <ul id="thumbnail2" class="embedMovie-thumbnail"></ul>
+
+                                        <ul id="thumbnail" class="embedMovie-thumbnail">
+                                            <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/schoollife/special_youku_1.jpg" onClick="changeFramePage1('http://player.youku.com/embed/XMTczMzczMTEzNg');"></li>
+                                            <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/schoollife/special_youku_2.jpg" onClick="changeFramePage1('http://player.youku.com/embed/XMTczMzczNDI2NA');"></li>
+                                            <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/schoollife/special_youku_3.jpg" onClick="changeFramePage1('http://player.youku.com/embed/XMTczMzczNTY4MA');"></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

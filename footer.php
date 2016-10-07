@@ -5,7 +5,7 @@
                 <dl>
                     <dt><a href="<?=home_url('/guide/')?>">学校案内</a></dt>
                     <dd><a href="<?=home_url('/guide/')?>">学校案内</a></dd>
-                    <dd><a href="<?=home_url('/guide/reason/')?>">九外を選ぶ理由</a></dd>
+                    <dd><a href="<?=home_url('/guide/reason/')?>">私が九外に決めた理由</a></dd>
                     <dd><a href="<?=home_url('/teacher/')?>">教員紹介</a></dd>
                 </dl>
             </div>
@@ -31,7 +31,7 @@
                     <dd><a href="<?=home_url('/event/news/')?>">お知らせ</a></dd>
                     <dd><a href="<?=home_url('/event/event/')?>">年中行事</a></dd>
                     <dd><a href="<?=home_url('/event/briefing/')?>">進学説明会</a></dd>
-                    <dd><a href="<?=home_url('/event/lecture/')?>">来訪講演会</a></dd>
+                    <dd><a href="<?=home_url('/event/lecture/')?>">著名な学者による講演会</a></dd>
                 </dl>
             </div>
         </nav>

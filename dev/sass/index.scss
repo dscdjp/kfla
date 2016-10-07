@@ -110,16 +110,14 @@
         width: 93%;
         height: 1.4em;
         float: left;
-        position: relative;
         overflow: hidden;
         i {
             color: $clr_sblue;
         }
-        p {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: none;
+        ul {
+            padding: 0;
+            list-style: none;
+            width: 100%;
         }
     }
     @include mq-sp {
@@ -394,7 +392,7 @@
             float: left;
             width: 15.6666%;
             margin: 0.5%;
-            img {
+            input {
                 width: 100%;
             }
         }
@@ -409,12 +407,13 @@
 
 .tab {
     &-menu {
-        list-style: none;
+        display: table;
+        width: 100%;
         padding: 0;
         margin: 0;
         @include clearfix;
         li {
-            float: left;
+            display: table-cell;
             width: 25%;
             a {
                 display: block;

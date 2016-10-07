@@ -132,6 +132,49 @@
                             </p>
                         </div>
                     </div>
+
+                    <h2 class="mainSec-tit_2">HOANGVAN　BANGさん</h2>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <p class="stipendiary-img"><img src="<?=get_template_directory_uri()?>/assets/img/schoollife/main_img_39.jpg"></p>
+                        </div>
+                        <div class="col-sm-8 col-md-8">
+                            <p>
+                                わたしにとって奨学金をもらえたことはとてもありがたいことです。
+                                とても嬉しくて幸せでした。
+                                九州外国語学院で今までもう一年を過ごしました。
+                                一年を振り返って自分の能力がまだ足りないと思っています。
+                                奨学金をもらえたのは大きい支援となります。
+                                ほんとにありがとうございました。
+                                今からもっと頑張ります。
+                            </p>
+                            <p>
+                                Đối với tôi việc nhận học bổng là điều may mắn. Tôi rất vui và hạnh phúc.
+                                Đến bây giờ tôi đã trải qua 1 năm ở trường Học viện ngoại ngữ Kyushu.
+                                Nhìn lại một năm qua tôi cảm thấy những nỗ lực của bản thân vẫn chưa đủ.
+                                Việc nhận học bổng là sự hỗ trợ rất lớn với tôi.
+                                Xin chân thành cảm ơn. Từ bây giờ tôi sẽ cố gắng hơn nữa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="mainSec-tit_2">NGUYEN　VANLINHさん</h2>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <p class="stipendiary-img"><img src="<?=get_template_directory_uri()?>/assets/img/schoollife/main_img_40.jpg"></p>
+                        </div>
+                        <div class="col-sm-8 col-md-8">
+                            <p>
+                                私はグェンヴァンリンと申します。
+                                まずは皆さんに言いたいことがあります。今日の結果は自分で勉強するのはできません。先生と友達にたくさん教えてもらっています。なお留学生にとってお金が大切ですから、団体にお金をもらったら誠にありがとうございました。
+                                私は奨学金をもらえる者の一人です。今私の感覚が喜びを表現することができませんけど、本当に嬉しかったです。私は日本に留学したくて、日本で就職したいです。そのため、今は一生懸命努力しています。このお金が奨学金というより声援です。私は本当に皆さん二直接会います。そして，全ての意見を言いたいです。心から感謝致します。ぜひもっと頑張ります。
+                            </p>
+                            <p>
+                                Tên tôi là Nguyễn Văn Linh là học sinh của lớp cô Shigekosi trường Kyushu foreign language academy tỉnh Fukuoka, Nhật Bản. Lời đầu tiên em xin chân thành cảm ơn sự dạy dỗ chỉ bảo của thầy cô và nhà trường đã giúp em có cơ hội tham gia vào kì thi giành học bổng vừa qua.Đối với du học sinh như em đó là một phần quà to lớn giúp chúng em bớt khó khăn với học phí và cuộc sống ở Nhật. Thật sự em cảm ơn đoàn thể và tất cả mọi người.
+                                Em là một trong những học sinh được nhận học bổng. Cảm giác bây giờ rất vui. Mục đích của em đến Nhật là được học tập và làm việc ở Nhật-Đất nước đẹp đẽ này. Chính vì lẽ đó em đang cố gắng rèn luyện từng ngày.Học bổng này là nguồn động viên về mặt tinh thần và vật chất,nó giúp em tự tin và làm điểm tựa cho em phấn đấu. Từ trong tâm, em xin chân thành cảm ơn.
+                            </p>
+                        </div>
+                    </div>
                     <p class="stipendiary-end">
                         日本国内で進学をめざし、夢を叶えようと頑張る学生を、<br class="hidden-xs">
                         本校は<em>全力でサポート</em>します!!

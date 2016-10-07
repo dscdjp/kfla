@@ -6,7 +6,7 @@
                 <div class="newsFeed">
                     <p class="newsFeed-tit">NEWS</p>
                     <div class="newsFeed-content">
-                        <dl>
+                        <ul class="swiper-wrapper">
                             <?php
                             $query_newsFeed = array('post_type'=>'post', 'posts_per_page' => 5);
                             $newsFeed = new WP_Query( $query_newsFeed );
@@ -14,13 +14,13 @@
                             while($newsFeed->have_posts()):
                             $newsFeed->the_post();
                             ?>
-                            <p>
+                            <li class="swiper-slide">
                                 <a href="<?php the_permalink(); ?>">
                                     <i class="fa fa-caret-right" aria-hidden="true"></i> <?php the_title(); ?>
                                 </a>
-                            </p>
+                            </li>
                             <?php endwhile; endif; wp_reset_query(); ?>
-                        </dl>
+                        </ul>
                     </div>
                 </div>
                 <h1 class="mainSec-tit_1">
@@ -61,7 +61,7 @@
 
         <div class="wideBnr-reason">
             <a href="<?=home_url('/guide/reason/')?>">
-                <p>九州外国語学院<br>を選ぶ理由</p>
+                <p>私が九外に<br>決めた理由</p>
                 <p><span class="btn btn-s btn-line_white">詳細はこちら</span></p>
             </a>
         </div>
@@ -94,10 +94,17 @@
                     </ul>
                     <div class="row">
                         <div class="col-sm-6 col-md-6 embedMovie">
-                            <div class="embedMovie-player">
-                                <div id="player"></div>
+                            <div class="wrap embedMovie-player" id="MainPhoto">
+                                <iframe src="http://player.youku.com/embed/XMTczMzY5Njc0OA" frameborder="0"></iframe>
                             </div>
-                            <ul id="thumbnail" class="embedMovie-thumbnail"></ul>
+                            <ul id="thumbnail" class="embedMovie-thumbnail">
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_1.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMzY5Njc0OA');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_2.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTcyNzUwNTgyMA');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_3.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMjYxODA0NA');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_4.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMzgxNTczNg');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_5.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMzgxODk0NA');"></li>
+                                <li><input type="image" src="<?=get_template_directory_uri()?>/assets/img/index/index_youku_6.jpg" onClick="changeFramePage0('http://player.youku.com/embed/XMTczMTMyMjYwNA');"></li>
+                            </ul>
                         </div>
                         <div class="col-sm-6 col-md-6 embedChart">
                             <p>
@@ -186,7 +193,7 @@
                             <a href="#briefing">進学説明会</a>
                         </li>
                         <li>
-                            <a href="#lecture">来訪講演会</a>
+                            <a href="#lecture">著名な学者による講演会</a>
                         </li>
                     </ul>
                     <div id="news" class="tab-content">
