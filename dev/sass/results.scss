@@ -158,8 +158,28 @@
         margin-bottom: $mg_m;
     }
     &-download {
-        .btn-orange {
-            width: 100%;
+        h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: #EB672C;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        p a {
+            font-size: 16px;
+            width: 45%;
+            margin: 1%;
+        }
+    }
+    &-ranking {
+        h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: #EB672C;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
         }
     }
     &-website {
