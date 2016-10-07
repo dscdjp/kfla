@@ -6,7 +6,7 @@
                 <div class="newsFeed">
                     <p class="newsFeed-tit">NEWS</p>
                     <div class="newsFeed-content">
-                        <dl>
+                        <ul class="swiper-wrapper">
                             <?php
                             $query_newsFeed = array('post_type'=>'post', 'posts_per_page' => 5);
                             $newsFeed = new WP_Query( $query_newsFeed );
@@ -14,13 +14,13 @@
                             while($newsFeed->have_posts()):
                             $newsFeed->the_post();
                             ?>
-                            <p>
+                            <li class="swiper-slide">
                                 <a href="<?php the_permalink(); ?>">
                                     <i class="fa fa-caret-right" aria-hidden="true"></i> <?php the_title(); ?>
                                 </a>
-                            </p>
+                            </li>
                             <?php endwhile; endif; wp_reset_query(); ?>
-                        </dl>
+                        </ul>
                     </div>
                 </div>
                 <h1 class="mainSec-tit_1">

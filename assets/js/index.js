@@ -25,17 +25,25 @@ $(function(){
         prevButton: '.swiper-button_prev',
 
     });
+    var newsFeed = $('.newsFeed-content').swiper({
+        //Your options here:
+        // pagination: '.pagination',
+        loop:true,
+        autoplay:3000,
+        touchRatio:0.6
+
+    });
     // スライダー
 
-    var $interval = 3000; // 切り替わりの間隔（ミリ秒）
-    var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
-    $(".newsFeed-content p:first").addClass("active").show();
-    setInterval(function(){
-        var $active = $(".newsFeed-content p.active");
-        var $next = $active.next("p").length?$active.next("p"):$(".newsFeed-content p:first");
-        $active.fadeOut($fade_speed).removeClass("active");
-        $next.fadeIn($fade_speed).addClass("active");
-    },$interval);
+//    var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+//    var $fade_speed = 1000; // フェード処理の早さ（ミリ秒）
+//    $(".newsFeed-content p:first").addClass("active").show();
+//    setInterval(function(){
+//        var $active = $(".newsFeed-content p.active");
+//        var $next = $active.next("p").length?$active.next("p"):$(".newsFeed-content p:first");
+//        $active.fadeOut($fade_speed).removeClass("active");
+//        $next.fadeIn($fade_speed).addClass("active");
+//    },$interval);
 
 
 
